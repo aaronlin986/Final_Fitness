@@ -28,7 +28,7 @@ public class countDownTimer extends AppCompatActivity  {
         min = (TextView) findViewById(R.id.minutes);
         sec = (TextView) findViewById(R.id.seconds);
         start = (Button) findViewById(R.id.startTime);
-        //testtest
+        
         start.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 totalTime = new Time(Long.parseLong(min.getText().toString()) * 60 * 1000 + Long.parseLong(sec.getText().toString()) * 1000);
