@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".countDownTimer" />
+        <activity android:name=".myList"/>
     </application>
 
 </manifest>
