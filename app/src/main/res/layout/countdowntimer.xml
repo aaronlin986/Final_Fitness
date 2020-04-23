@@ -12,11 +12,11 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/minutes"
-            android:text="1"
+            android:hint="1"
             android:textSize="75sp"
             />
 
@@ -24,17 +24,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/colon"
-            android:text=":"
+            android:hint=":"
             android:textSize="75sp"
             />
-        <TextView
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/seconds"
-            android:text="00"
+            android:hint="00"
             android:textSize="75sp"
         />
     </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:progress="100"
+        style="?android:progressBarStyleHorizontal"
+        android:id="@+id/timeBar"
+        />
 
     <Button
         android:layout_width="wrap_content"

@@ -12,13 +12,40 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:text="Workouts"
+            android:hint="Workouts"
             android:textSize="20sp"
             android:id="@+id/titleBar"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/durationM"
+            android:hint="1"
+            android:layout_toLeftOf="@id/colon"
+            />
+
+        <TextView
+            android:id="@+id/colon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:layout_toLeftOf="@id/durationS"
+            android:hint=":"
+            android:textSize="35sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/durationS"
+            android:hint="00"
+            android:layout_toLeftOf="@id/clear"
             />
 
         <Button
@@ -29,11 +56,44 @@
             android:textSize="25sp"
             android:id="@+id/addButton"
             />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clear"
+            android:text="clear"
+            android:textSize="10sp"
+            android:layout_toLeftOf="@id/addButton"
+        />
     </RelativeLayout>
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/workoutList"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/begin"
+            android:text="Start"
+            android:textSize="10sp"
+            />
+
+        <ProgressBar
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:progress="100"
+            style="?android:progressBarStyleHorizontal"
+            android:id="@+id/progressTime"
+            />
+
+    </LinearLayout>
+
 
 </LinearLayout>
