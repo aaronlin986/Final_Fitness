@@ -10,7 +10,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     ImageView img;
     ImageView wo;
     ImageView time;
-    ImageView stat;
     static String datas[] = new String[3];
     Uri imageUri;
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -101,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
         edit = (Button) findViewById(R.id.update);
         wo = (ImageView) findViewById(R.id.workouts);
         time = (ImageView) findViewById(R.id.timer);
-        stat = (ImageView) findViewById(R.id.stats);
 
         img.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -134,12 +131,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        stat.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(getApplicationContext(), myList.class);
-                startActivity(intent);
-            }
-        });
 
     }
 
